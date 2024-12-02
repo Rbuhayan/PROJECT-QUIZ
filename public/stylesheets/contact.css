@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    background-color: #0A0A0A; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1F1F1F;
+    padding: 20px 40px;
+    border-bottom: 5px solid #E9B824;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: "Concert One", cursive;
+    color: #E9B824;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-shadow: 3px 5px 5px #000000;
+}
+
+h1 {
+    font-family: 'Concert One', cursive;
+    font-size: 50px;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    color: #E9B824; 
+    text-shadow: 3px 5px 5px rgba(0, 0, 0, 0.8);  
+}
+
+.button {
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    color: #F1F1F1; 
+    text-decoration: none;
+    font-size: 25px;
+    padding: 10px 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-shadow: 1px 5px 2px #000000;
+
+}
+
+.button:hover {
+  color: #E9B824   ;
+  text-shadow: 3px 5px 5px #000000; 
+}
+
+.contact-container {
+    background: #1F1F1F;
+    border: 5px solid #F1F1F1;
+    padding: 5px 30px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%; 
+    max-width: 500px;
+    margin-top: 8%; 
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.contact-form label {
+    font-size: 16px; 
+    letter-spacing: 2px; 
+    color: #F1F1F1;
+    font-family: Montserrat;
+    text-shadow: 3px 2px 2px #000000;
+    margin-bottom: 6px; 
+    display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 90%; 
+    padding: 5px;  
+    margin-bottom: 12px;  
+    font-family: Nunito;
+    border: 2px solid #F1F1F1;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    background-color: #F1F1F1;
+    color: #F1F1F1;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #E9B824;
+    outline: none;
+}
+
+.contact-form button {
+    background-color: #E9B824;
+    color: #000000;
+    border: 2px solid #E9B824;
+    padding: 10px 20px; 
+    font-family: Nunito, sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #000000;
+    color: #E9B824;
+    transform: scale(1.05);
+    text-shadow: 2px 2px 2px #000000;
+}
+
+.social-media {
+    margin-top: 5px;
+    text-align: center;
+}
+
+h3{
+    font-family: montserrat;
+    color: #F1F1F1;
+}
+.social-icon {
+    font-size: 30px;
+    margin: 0 15px;
+    color: #F1F1F1;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #E9B824;
+}

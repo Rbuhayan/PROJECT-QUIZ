@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Concert+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    background-color: #0A0A0A; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1F1F1F; 
+    padding: 20px 40px;
+    border-bottom: 5px solid #E9B824; 
+}
+
+.logo {
+    font-family: 'Concert One', cursive;
+    color: #E9B824;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-shadow: 3px 5px 5px #000000; 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 40px;
+}
+
+.nav-links a {
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    color: #F1F1F1;  
+    text-decoration: none;
+    font-size: 25px;
+    padding: 10px 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-shadow: 1px 5px 2px #000000;  
+}
+
+.nav-links a:hover {
+    color: #E9B824;  
+    transform: scale(1.1);
+    text-shadow: 3px 5px 5px #000000; 
+}
+
+h1 {
+    font-family: 'Concert One', cursive;
+    font-size: 100px;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    color: #E9B824; 
+    text-shadow: 5px 5px 25px rgba(0, 0, 0, 0.8);  
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 28px;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+    color: #D1D1D1; 
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);  
+}
+
+.wd {
+    padding: 5% 20px;
+    text-align: center;
+    color: #F1F1F1;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    color: #F1F1F1;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);  
+}
+
+a.button {
+    display: inline-block;
+    background-color: #C5A56B;  
+    color: #0A0A0A; 
+    padding: 15px 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); 
+}
+
+a.button:hover {
+    background-color: #F1F1F1; 
+    color: #0A0A0A;  
+    transform: scale(1.05);  
+}

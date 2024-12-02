@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Trivia Questions</title>
+  
+  <link rel="stylesheet" href="/stylesheets/question.css">
+</head>
+<body>
+  <div class="container-xl">
+    <h1 class="mb-4">Trivia Questions</h1>
+
+    <% if (questions.length > 0) { %>
+      <ul class="list-group">
+        <% questions.forEach((question, index) => { %>
+          <!-- Exclude True/False questions -->
+          <% if (question.correct_answer !== 'True' && question.correct_answer !== 'False') { %>
+            <!-- Randomize choices array -->
+            <% const choices = [...question.incorrect_answers, question.correct_answer]; %>
+            <% choices.sort(() => Math.random() - 0.5); %>
+
+            <li class="list-group-item">
+              <strong>Question:</strong> <%= question.question %><br>
+              <strong>Difficulty:</strong> <%= question.difficulty %> <br>
+
+              <!-- Render shuffled choices -->
+              <% choices.forEach((choice, i) => { %>
+                <div>
+                  <input type="radio" name="sagot<%= index %>" value="<%= choice %>" id="q<%= index %>_<%= i %>">
+                  <label for="q<%= index %>_<%= i %>" class="answer-text"><%= choice %></label>
+                </div>
+              <% }); %>
+            </li>
+          <% } %>
+        <% }); %>
+      </ul>
+    <% } else { %>
+      <p>No questions available.</p>
+    <% } %>
+
+    <button onclick="showScore()" class="btn btn-primary mt-4">Submit Answers!</button>
+
+    <!-- Score Modal -->
+    <div class="modal fade" id="scoreModal" tabindex="-1" aria-labelledby="scoreModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="scoreModalLabel">Quiz Results</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h3 id="score-text" class="text-center"></h3>
+          </div>
+          <div class="modal-footer">
+            <a href="/indexs/" class="btn btn-secondary">Try Again</a>
+     
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    const questions = <%- JSON.stringify(questions) %>;
+
+    function showScore() {
+      let score = 0;
+
+      questions.forEach((question, index) => {
+        const selectedAnswer = document.querySelector(`input[name="sagot${index}"]:checked`);
+        const correctAnswer = question.correct_answer;
+
+        if (selectedAnswer) {
+          const isCorrect = selectedAnswer.value === correctAnswer;
+          if (isCorrect) {
+            score++;
+          } else {
+            // Highlight wrong and correct answers
+            selectedAnswer.nextElementSibling.classList.add('wrong-answer');
+            const correctLabel = Array.from(document.querySelectorAll(`input[name="sagot${index}"] + label`))
+              .find(label => label.innerText === correctAnswer);
+            if (correctLabel) correctLabel.classList.add('correct-answer');
+          }
+        } else {
+          // If no answer selected, only highlight the correct answer
+          const correctLabel = Array.from(document.querySelectorAll(`input[name="sagot${index}"] + label`))
+            .find(label => label.innerText === correctAnswer);
+          if (correctLabel) correctLabel.classList.add('correct-answer');
+        }
+      });
+
+      // Display the score in the modal
+      const scoreText = document.getElementById('score-text');
+      scoreText.innerText = `Your Score is ${score}/${questions.length}`;
+      const scoreModal = new bootstrap.Modal(document.getElementById('scoreModal'));
+      scoreModal.show();
+    }
+  </script>
+</body>
+</html>

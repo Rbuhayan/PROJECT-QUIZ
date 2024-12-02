@@ -1,0 +1,38 @@
+:root{
+    --p-clr: gray;
+    --bg-vlr: linear-gradient(to right, #868f96 0%, #596164 100%);
+    --hd-clr: #393e46;
+}
+*{
+    background-color: var(--bg-vlr);
+
+}
+body{
+    background-color: var(--bg-vlr);
+    text-align: center;
+
+}
+p{
+    color: var(--p-clr);
+    text-align: justify;
+}
+h1{
+    color: var(--p-clr);
+}
+nav ul li a{
+    text-decoration: none;
+}
+nav ul li{
+    float: right;
+    list-style: none;
+
+}
+img{
+    height: 40%;
+    width: 50%;
+    
+}
+.position{
+    padding: 30px;
+
+}

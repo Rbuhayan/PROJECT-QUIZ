@@ -1,0 +1,174 @@
+/* Global Styles */
+body {
+   font-family: Arial, sans-serif;
+   background-color: #f8f9fa;
+   color: #333;
+ }
+ 
+ h1 {
+   font-size: 2.5rem;
+   text-align: center;
+   color: #343a40;
+ }
+ 
+ .container-xl {
+   padding: 20px;
+   max-width: 900px;
+   margin: auto;
+ }
+ 
+ .list-group-item {
+   background-color: #fff;
+   border: 1px solid #ddd;
+   padding: 15px;
+   margin-bottom: 10px;
+   border-radius: 5px;
+ }
+ 
+ strong {
+   font-weight: bold;
+ }
+ 
+ /* Answer choices */
+ input[type="radio"] {
+   margin-right: 10px;
+ }
+ 
+ label.answer-text {
+   font-size: 1.1rem;
+   cursor: pointer;
+   display: inline-block;
+   margin-bottom: 8px; /* Add margin between each answer choice */
+   padding: 10px;
+   background-color: #f1f1f1;
+   border-radius: 5px;
+   width: 100%; /* Ensures each answer choice spans full width */
+ }
+ 
+ label.answer-text:hover {
+   color: #007bff;
+   background-color: #e2e6ea; /* Add background hover effect */
+ }
+ 
+ div {
+   margin-bottom: 12px; /* Space between each answer option */
+ }
+ 
+ /* Styling for correct and wrong answers */
+ .correct-answer {
+   background-color: #28a745;
+   color: white;
+   font-weight: bold;
+   padding: 5px;
+   border-radius: 3px;
+ }
+ 
+ .wrong-answer {
+   background-color: #dc3545;
+   color: white;
+   font-weight: bold;
+   padding: 5px;
+   border-radius: 3px;
+ }
+ 
+ /* Submit button */
+ button {
+   display: block;
+   width: 100%;
+   padding: 12px;
+   font-size: 1.2rem;
+   background-color: #007bff;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-top: 20px;
+ }
+ 
+ button:hover {
+   background-color: #0056b3;
+ }
+ 
+ /* Modal */
+ .modal-content {
+   padding: 20px;
+ }
+ 
+ .modal-header {
+   background-color: #007bff;
+   color: white;
+ }
+ 
+ .modal-footer {
+   text-align: center;
+ }
+ 
+ .modal-footer .btn {
+   background-color: #28a745;
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   margin: 0 10px;
+   border-radius: 5px;
+ }
+ 
+ .modal-footer .btn:hover {
+   background-color: #218838;
+ }
+ 
+ .modal-body {
+   text-align: center;
+ }
+ /* Basic styles for the radio button */
+input[type="radio"] {
+   display: none; /* Hide the default radio button */
+ }
+ 
+ /* Basic styles for the radio button */
+input[type="radio"] {
+   display: none; /* Hide the default radio button */
+ }
+ 
+ /* Style the custom label */
+ label.answer-text {
+   display: inline-block;
+   padding: 8px 20px;
+   margin: 5px;
+   border: 2px solid #ccc;
+   border-radius: 30px;
+   cursor: pointer;
+   font-size: 16px;
+   background-color: #f9f9f9;
+   transition: all 0.3s ease;
+ }
+ 
+ /* Add a hover effect */
+ label.answer-text:hover {
+   background-color: #e0e0e0;
+ }
+ 
+ /* Style the radio button when selected */
+ input[type="radio"]:checked + label.answer-text {
+   background-color: #4caf50;
+   color: white;
+   border-color: #4caf50;
+ }
+ 
+ 
+ 
+ 
+ /* Responsive Styles */
+ @media (max-width: 768px) {
+   .container-xl {
+     padding: 15px;
+   }
+ 
+   button {
+     padding: 10px;
+   }
+ 
+   .modal-dialog {
+     max-width: 90%;
+   }
+ }
+ 

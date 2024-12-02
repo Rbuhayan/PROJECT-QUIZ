@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Concert+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+  background-color: #020204e7;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+header {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1F1F1F;
+    padding: 20px 40px;
+    border-bottom: 5px solid #E9B824;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+  font-family: 'Concert One', sans-serif;
+  color: #d4a91c;
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  text-shadow: 5px 10px 2px #000000;
+}
+
+h1 {
+  font-family: 'Concert One', cursive;
+  font-size: 50px;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+  color: #E9B824; 
+  text-shadow: 3px 5px 5px rgba(0, 0, 0, 0.8);  
+}
+
+.button {
+  letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    color: #F1F1F1; 
+    text-decoration: none;
+    font-size: 25px;
+    padding: 10px 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-shadow: 1px 5px 2px #000000;
+}
+
+.button:hover {
+  color: #d4a91c;
+  text-shadow: 3px 5px 5px #000000;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.team-card {
+  background: linear-gradient(135deg, rgba(81, 79, 79, 0.199), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1190px;
+  height: auto;
+  padding: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: left;
+  color: #ffffff;
+  margin:5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
+  background: linear-gradient(135deg, rgba(81, 79, 79, 0.3), rgba(255, 255, 255, 0)); 
+}
+
+.team-card img {
+  border-radius: 20%;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+  margin: 15px 10px;
+}
+
+.team-card h3 {
+  font-family: 'Concert One', sans-serif;
+  font-size: 30px;
+  color: #d4a91c;
+  letter-spacing: 5px;
+  margin: 30px 0;
+}
+
+.team-card h2 {
+  font-family: 'Concert One', sans-serif;
+  font-size: 25px;
+  letter-spacing: 2px;
+  color: #d4a91c;
+  margin-top: 0;
+}
+
+.team-card p {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.4;
+  text-shadow: 3px 3px 2px #000000;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 5px;
+  color: #ffffff;
+  font-size: 50px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #d4a91c;
+}
+
+.gian, .ayan, .tamz {
+  font-family: 'Concert One', sans-serif;
+  font-size: 30px;
+  color: #d4a91c;
+  text-shadow: 5px 5px 2px #000000;
+  letter-spacing: 3px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.gian {
+  text-align: center;
+}
+
+.ayan {
+  text-align: center;
+}
+
+.tamz {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .team-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-card img {
+    width: 80%;
+    height: auto;
+  }
+
+  .team-card h2, .team-card p {
+    text-align: center;
+  }
+
+  .social-icons a {
+    font-size: 40px;
+  }
+
+  .gian, .ayan, .tamz {
+    font-size: 20px;
+  }
+}
